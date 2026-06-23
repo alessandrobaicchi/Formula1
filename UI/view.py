@@ -28,6 +28,8 @@ class View(ft.UserControl):
         self._ddAnno2 = ft.Dropdown(label="A", hint_text="Anno")
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handleCreaGrafo)
 
+        # Dopo aver creato i due bottoni ddAnno1 e ddAnno2 chiamo il metodo per riempirli
+        self._controller.fillDDYears();
 
         cont1 = ft.Container(self._ddAnno1, width=250)
         cont2 = ft.Container(self._ddAnno2, width=250)
